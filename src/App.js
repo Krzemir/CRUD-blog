@@ -19,7 +19,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="post/view/:postId" element={<Post />} />
         <Route path="post/add" element={<PostAdd />} />
-        <Route path="post/edit"element={<PostEdit />} />
+        <Route path="post/edit/:postId"element={<PostEdit />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

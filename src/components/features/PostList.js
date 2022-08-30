@@ -1,11 +1,11 @@
 import { Container, Row } from "react-bootstrap";
 import { useSelector } from "react-redux";
-import { selectAllPosts } from "../../redux/postsRedux";
+import { getAllPosts } from "../../redux/postsRedux";
 import PostCard from "./PostCard";
 
 
 const PostList = () => {
-    const allPosts = useSelector(selectAllPosts);
+    const allPosts = useSelector(getAllPosts);
 
     return ( 
         <Container>
