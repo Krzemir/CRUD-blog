@@ -12,7 +12,6 @@ const PostEditForm = () => {
     const postData = useSelector(state => getPostById( state, postId));
 
     const handleSubmit = postData => {
-        console.log({...postData, id: postId})
        dispatch(editPost( {...postData, id: postId }));
         navigate('/');
       };
