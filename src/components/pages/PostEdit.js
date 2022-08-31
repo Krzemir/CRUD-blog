@@ -1,4 +1,3 @@
-import {  useParams } from "react-router-dom";
 import { Col, Container, Row } from "react-bootstrap";
 import PostEditForm from "../features/PostEditForm";
 
