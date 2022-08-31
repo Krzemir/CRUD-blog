@@ -18,7 +18,7 @@ export const deletePost = payload => ({type: DELETE_POST, payload});
 export const addPost = payload => ({type: ADD_POST, payload});
 export const editPost = payload => ({type: EDIT_POST, payload});
 
-
+//subreducer 
 const postsReducer = (statePart = [], action) => {
     switch (action.type) {
         case DELETE_POST:
