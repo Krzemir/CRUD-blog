@@ -43,6 +43,7 @@ const deleteThisPost = (e) => {
             <Col lg={9}>
             <p><span className="fw-bold">Author: </span>{postData.author} </p>
             <p><span className="fw-bold">Published: </span> {dateToStr(postData.publishedDate)}</p>
+            <p><span className="fw-bold">Category: </span>{postData.category} </p>
             </Col>
             </Row>
             <Row className="justify-content-center">

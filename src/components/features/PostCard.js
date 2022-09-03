@@ -12,7 +12,8 @@ const PostCard = (props) => {
             <Card.Body>
                 <Card.Title className='mb-3'>{props.title}</Card.Title>
                 <Card.Text className='mb-1'><strong>Author: </strong>{props.author}</Card.Text>
-                <Card.Text><strong>Published: </strong>{dateToStr(props.publishedDate)}</Card.Text>
+                <Card.Text className='mb-1'><strong>Published: </strong>{dateToStr(props.publishedDate)}</Card.Text>
+                <Card.Text className='mb-3'><strong>Category: </strong>{props.category}</Card.Text>
                 <Card.Text>{props.shortDescription}</Card.Text>
                 <Link to={`/post/view/${props.id}`}>
                     <Button variant="primary">Read more</Button>

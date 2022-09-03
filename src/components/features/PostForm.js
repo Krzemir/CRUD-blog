@@ -8,8 +8,12 @@ import DatePicker from 'react-datepicker';
 //hooks
 import { useState } from 'react';
 import { useForm } from "react-hook-form";
+import { useSelector } from 'react-redux';
 
 //functions
+
+
+import { getAllCategories } from "../../redux/categoriesRedux";
 
 //styles
 import 'react-quill/dist/quill.snow.css';
@@ -18,25 +22,26 @@ import "react-datepicker/dist/react-datepicker.css";
 
 const PostForm = ({action, actionText, ...props}) => {
 
+    const allCategories = useSelector(getAllCategories)
+
     const [title, setTitle] = useState(props.title || '');
     const [author, setAuthor] = useState(props.author || '');
     const [publishedDate, setPublishedDate] = useState(props.publishedDate || '');
+    const [category, setCategory] = useState(props.category ||'');
     const [shortDescription, setShortDescription] = useState(props.shortDescription || '');
     const [content, setContent] = useState(props.content || '');
     const [contentError, setContentError] = useState(false);
-    const[dateError, setDateError] = useState(false);
-
+    const [dateError, setDateError] = useState(false);
+    const [categoryError, setCategoryError] = useState(false);
     const { register, handleSubmit: validate, formState: { errors } } = useForm();
 
     const handleSubmit = e => { 
         setContentError(!content)
         setDateError(!publishedDate)
+        setCategoryError(!category)
         if(content && publishedDate) {
-            action({title, author, publishedDate, shortDescription, content});
-        } else {
-
-        }
-  
+            action({title, author, publishedDate, shortDescription, content, category});
+        } 
     };
 
     
@@ -59,9 +64,21 @@ const PostForm = ({action, actionText, ...props}) => {
             <Form.Label>Published</Form.Label>
             <DatePicker selected={publishedDate} 
             dateFormat='dd/MM/yyyy'
-            onChange={(date) => setPublishedDate(date)} />
+            onChange={(date) => setPublishedDate(date)} 
+            className="mb-3"/>
             {dateError && <small className="d-block form-text text-danger my-2">Date can't be empty</small>}
 
+            <Form.Label>Category</Form.Label>
+            <Form.Select aria-label="Default select example" className="w-50 mb-3"  onChange={(e) => setCategory(e.target.value)}>
+                <option>Choose</option>
+                {allCategories.map((category) => (
+                <option value={category.name} key={category.id}>
+                {category.name}
+                </option>
+                ))} 
+                
+             </Form.Select>
+             {categoryError && <small className="d-block form-text text-danger my-2">Category must be chosen</small>}
             <Form.Label>Short description</Form.Label>
             <Form.Control 
             {...register("shortDescription", { required: true, minLength: 4 })}
