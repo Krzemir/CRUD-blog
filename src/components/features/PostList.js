@@ -13,7 +13,7 @@ const PostList = (props) => {
     if(props.category){
     return ( 
         <Container>
-            <Row className="justify-content-between my-4">
+            <Row className="justify-content-start my-4 gap-3">
                 {postByCategory.map((post) => (
                     <PostCard key={post.id} {...post} />
                 ))}
@@ -23,7 +23,7 @@ const PostList = (props) => {
 
     return ( 
         <Container>
-            <Row className="justify-content-between my-4">
+            <Row className="justify-content-start my-4 gap-3">
                 {allPosts.map((post) => (
                     <PostCard key={post.id} category={props.category} {...post} />
                 ))}
