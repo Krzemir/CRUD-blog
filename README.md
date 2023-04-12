@@ -13,8 +13,8 @@ Application created for educational purposes
 
 <p> screenshots: </p>
 
-<img src="https://i.postimg.cc/qRchgyL8/screencapture-blog-site-crud-app-onrender-2023-02-20-20-51-50.png" style="width: 70%"/>
+<img src="https://lh3.googleusercontent.com/pw/AJFCJaXYCIzadJ8o85SfOTzyGKHOZazkrPOTn6AWa3ITtFQZRxcVtNC_wNWKPvhd3fgYPXMD_FE6RsukNDVU_IF5sZ9NRVlXm5OvuY0TwEQUY23Dr6Crm7997AI8EbgLW6ATcxp1xFNqecdIJksI5DZ0LLw=w1143-h952-s-no?authuser=1" style="width: 70%"/>
 
 -----------------
 
-<img src="https://i.postimg.cc/Pxnvt2mX/screencapture-blog-site-crud-app-onrender-post-edit-3-2023-02-20-20-52-15.png" style="width: 70%"/>
+<img src="https://lh3.googleusercontent.com/pw/AJFCJaVRo0e3l8ldEBN7ouMWdC5o1VSrqZSiEYJDTGjRL6vXK_QSBQ1EjaS1qZHaKIXi40m6ce-Zqld09M6fN5tV73Ldo8x9xibNDDhasoi17j3rkTe-jCm18MRFgCKC2WsRcpfhP2lGF8pbYn7XgfNrUBU=w1143-h910-s-no?authuser=1" style="width: 70%"/>
